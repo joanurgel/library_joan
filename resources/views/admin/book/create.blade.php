@@ -41,7 +41,7 @@
                     <input type="text" name="category" class="form-control">
                 </div>
 
-                <div class="mb-3">
+                {{-- <div class="mb-3">
                     <div class="label">Books_borrowed</div>
                     <input type="string" name="borrowed" class="form-control">
                 </div>
@@ -49,7 +49,7 @@
                 <div class="mb-3">
                     <div class="label">Books_return</div>
                     <input type="string" name="return" class="form-control">
-                </div>
+                </div> --}}
 
                 
 
