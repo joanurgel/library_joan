@@ -37,8 +37,7 @@ class BookController extends Controller
 
         }
         $books->category= $data['category'];
-        $books->books_borrowed=0;['date'];
-        $books->books_returned=0;['date'];
+       
         $books->save();
     
         return redirect ('admin/books')->with('message' , 'Name added successfully');
