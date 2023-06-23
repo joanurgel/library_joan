@@ -13,7 +13,7 @@ class SettingController extends Controller
     {
 
        
-        return view('admin.setting');
+        return view('admin.setting.index');
 
     }
 }

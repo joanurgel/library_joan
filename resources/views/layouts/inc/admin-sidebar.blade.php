@@ -74,7 +74,7 @@
 
 
                         
-                        <a class="nav-link text-white fw-bold" href="{{ url('admin/setting') }}">
+                        <a class="nav-link text-white fw-bold {{ Request::is('admin/setting') ? 'active':'' }}" href="{{ url('admin/setting') }}">
                             <div class="sb-nav-link-icon"><i class="bi bi-gear-fill"></i></div>
                             Setting
                         </a>

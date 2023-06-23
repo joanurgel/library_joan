@@ -10,7 +10,7 @@
             </div>
         </div>
 
-        <div class="container d-flex justify-content-center py-2 ">
+        {{-- <div class="container d-flex justify-content-center py-2 ">
             <a href="https://www.facebook.com" target="_blank">
             <button type="button" class="btn btn-primary btn-lg btn-floating mx-1" style="background-color: #54456b;">
               <i class="fab fa-facebook-f"></i>
@@ -34,11 +34,11 @@
               <i class="fab fa-twitter"></i>
             </button>
             </a>
-          </div>
+          </div> --}}
       
           <!-- Copyright -->
           <div class="text-center text-white" style="background-color: rgba(0, 0, 0, 0.2);">
-            © 2023 Copyright:
+           
             <a class="text-white" href="">Librarysystem.com</a>
           </div>
     </div>
