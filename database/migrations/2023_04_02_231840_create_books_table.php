@@ -18,8 +18,7 @@ class CreateBooksTable extends Migration
             $table->string('name');
             $table->string('image');
             $table->string('category');
-            $table->string('booksBorrowed');
-            $table->string('booksReturned');
+            
             $table->timestamps();
          
             
