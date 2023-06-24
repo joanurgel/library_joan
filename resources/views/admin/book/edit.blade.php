@@ -42,16 +42,7 @@
                     <input type="text" name="category" value="{{ $books->category }}" class="form-control">
                 </div>
 
-                <div class="mb-3">
-                    <div class="label">created_at</div>
-                    <input type="string" name="borrowed" value="{{ $books->borrowed }}" class="form-control">
-                </div>
-
-                <div class="mb-3">
-                    <div class="label">updated_at</div>
-                    <input type="string" name="return" value="{{ $books->return }}" class="form-control">
-                </div>
-
+                
                 
 
                 <div class="col-md-12">
