@@ -65,8 +65,7 @@ class BookController extends Controller
 
         }
         $books->category= $data['category'];
-        $books->books_borrowed=0;['date'];
-        $books->books_returned=0;['date'];
+        
         $books->update();
     
         return redirect ('admin/books')->with('message' , 'Books Updated successfully');      
