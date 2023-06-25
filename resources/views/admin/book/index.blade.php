@@ -13,7 +13,7 @@
             </h4>
 
         </div>
-        <div class="card-body">
+        <div class="item-container card-body">
             @if (session('message'))
                 <div class="alert alert-success">{{ session('message') }}</div>        
             @endif
@@ -48,7 +48,8 @@
                             <a href="{{ url('admin/edit-books/' . $item->id) }}" class="btn btn-success">Edit</a>
                         </td>
                         <td>
-                            <a href="{{ url('admin/delete-books/' . $item->id) }}" class="btn btn-danger">Delete</a>
+                            <a href="{{ url('admin/delete-books/' . $item->id) }}">
+                            <button type="button" value="{{ $item->id }}" class="deleteBooks btn btn-danger">Delete</button>
                         </td>
                     </tr>
                     @endforeach
@@ -58,14 +59,49 @@
             <div class="pagination">
                 {{ $books->links() }}
             </div>
-            
-            
-
-
         </div>
-        
     </div>
-
 </div>
 
+@endsection
+
+@section('scripts')
+<script>
+    $(document).ready(function() { 
+
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+
+                }
+            });
+           
+        $(document).on('click', '.deleteBooks', function () {
+
+            if(confirm('Are you sure you want to delete this borrower?'))
+            {
+                var thisClicked = $(this);
+                var item_id = thisClicked.val();
+
+                $.ajax({
+                    type:"POST",
+                   
+                    data:{
+                        'item_id' : item_id
+                    },
+                    success: function (res) {
+                        if(res.status == 200){
+                            thisClicked.closest('.item-container').remove();
+                            alert(res.message);
+                        }else{
+                            alert(res.message);
+                        }
+                    }
+                })
+            }
+
+        });
+        
+    });
+</script>
 @endsection

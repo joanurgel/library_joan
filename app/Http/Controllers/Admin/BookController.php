@@ -87,6 +87,21 @@ class BookController extends Controller
         {
             return redirect ('admin/books')->with('message' , 'No Books Id Found');  
         }
+
+        // $books = Book::find($books_id);
+        // if($books_id)
+        // {
+        //     $books->delete();
+        //     return response('admin/books')->json(
+                
+        //     );
+        // }
+        // else 
+        // {
+        //     return response('admin/books')->json(
+                
+        //     );
+        // }
     
     }
 
