@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
@@ -39,7 +39,7 @@
         </style>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  </head>
+  </head> --}}
     {{-- <body class="antialiased">
 
     <div id="joan">
@@ -79,10 +79,11 @@
                 $('.styled-table').DataTable();
             });
         </script> --}}
-    <body>    
+        
+    {{-- <body>    
         <div class="centered">LIBRARY SYSTEM</div>
         
-        {{-- <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0"> --}}
+        
 
             
             @if (Route::has('login'))
@@ -100,4 +101,130 @@
             @endif
         </div>
     </body>
+</html> --}}
+
+
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+
+    <title>Library System</title>
+
+    <style>
+        body {
+            padding-top: 50px;
+            background-image: url("images/2.jpg");
+            background-size: cover;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+        }
+
+        .navbar-brand {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .navbar-nav {
+            margin-right: 20px;
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff;
+            margin-right: 10px; 
+        }
+
+        .container {
+            padding: 0;
+        }
+
+        .container > * {
+            padding: 0;
+        }
+
+        .left-align {
+            text-align: left;
+        }
+
+        .navbar-collapse {
+            padding: 0;
+        }
+
+        .navbar-toggler {
+            padding: 0.25rem;
+        }
+
+        .navbar-nav .nav-item {
+            padding: 0;
+        }
+
+        .navbar-nav .nav-link {
+            padding: 0.9rem;
+        }
+
+        .navbar-logo {
+            width: 30px;
+            height: 30px; 
+            margin-right: 10px; 
+        }
+
+        .background-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            text-align: center;
+            font-size: 50px;
+            font-weight: bold;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 5px;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/8.png" alt="Library Management System" class="navbar-logo">Library Management System</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Books</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('login') }}">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('register') }}">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="background-text">LIBRARY MANAGEMENT SYSTEM</div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
 </html>
