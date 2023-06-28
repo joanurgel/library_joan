@@ -18,7 +18,7 @@
                 <div class="alert alert-success">{{ session('message') }}</div>        
             @endif
 
-            <table id="#styled-table" class="table table-bordered">
+            <table id="styled-table" class="table table-bordered">
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -66,6 +66,7 @@
 @endsection
 
 @section('scripts')
+<script src="//cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
 <script>
     $(document).ready(function() { 
 
@@ -101,7 +102,13 @@
             }
 
         });
+        $(document).ready(function () {
+            $('#styled-table').DataTable();
+        });
+        
         
     });
+
+    
 </script>
 @endsection
