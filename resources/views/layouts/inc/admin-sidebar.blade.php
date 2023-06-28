@@ -59,7 +59,7 @@
                         </div>
                         {{-- <div class="sb-sidenav-menu-heading">Addons</div> --}}
 
-                        <a class="nav-link {{ Request::is('admin/record') ? 'collapse active':'collapsed' }} text-white fw-bold" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePost" aria-expanded="false" aria-controls="collapseLayouts">
+                        {{-- <a class="nav-link {{ Request::is('admin/record') ? 'collapse active':'collapsed' }} text-white fw-bold" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePost" aria-expanded="false" aria-controls="collapseLayouts">
                             <div class="sb-nav-link-icon"><i class="bi bi-book-half "></i></div>
                           Record
                             <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
@@ -69,7 +69,7 @@
                                 <a class="nav-link text-white" href="{{ url('admin/add-record') }}">Add Record</a>
                                 <a class="nav-link text-white" href="{{ url('admin/record') }}">View Record</a>
                             </nav>
-                        </div>
+                        </div> --}}
 
 
 
@@ -77,6 +77,11 @@
                         <a class="nav-link text-white fw-bold {{ Request::is('admin/setting') ? 'active':'' }}" href="{{ url('admin/setting') }}">
                             <div class="sb-nav-link-icon"><i class="bi bi-gear-fill"></i></div>
                             Setting
+                        </a>
+
+                        <a class="nav-link text-white fw-bold {{ Request::is('admin/users') ? 'active':'' }}" href="{{ url('admin/users') }}">
+                            <div class="sb-nav-link-icon"><i class="bi bi-people-fill"></i></div>
+                            Users
                         </a>
                     </div>
                 </div>
