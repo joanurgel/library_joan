@@ -20,7 +20,7 @@
                             <th>Username</th>
                             <th>Email</th>
                             <th>Role</th>
-                            <th>Edit</th>
+                            
                         </tr>
                     </thead>
                     <tbody>
@@ -30,9 +30,7 @@
                                 <td>{{ $item->name }}</td>
                                 <td>{{ $item->email }}</td>
                                 <td>{{ $item->role_as == '1' ? 'Admin' : 'User' }}</td>
-                                <td>
-                                    <a href="{{ url('admin/user/' . $item->id) }}" class="btn btn-success">Edit</a>
-                                </td>
+                                
                             </tr>
                         @endforeach
                     </tbody>
