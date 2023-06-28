@@ -20,7 +20,7 @@
                             <th>Username</th>
                             <th>Email</th>
                             <th>Role</th>
-                            
+                            <th>Avatar</th> <!-- New column for displaying avatars -->
                         </tr>
                     </thead>
                     <tbody>
@@ -30,7 +30,7 @@
                                 <td>{{ $item->name }}</td>
                                 <td>{{ $item->email }}</td>
                                 <td>{{ $item->role_as == '1' ? 'Admin' : 'User' }}</td>
-                                
+                                <td><img src="" alt="Avatar" class="img-fluid rounded-circle avatar-img"></td> <!-- Placeholder for avatar -->
                             </tr>
                         @endforeach
                     </tbody>
@@ -38,8 +38,6 @@
             </div>
         </div>
     </div>
-
-
 @endsection
 
 @section('scripts')
@@ -47,7 +45,23 @@
     <script>
         $(document).ready(function () {
             $('#datatable').DataTable();
+
+            // Fetch avatar data from API and update avatar URLs
+            $.ajax({
+                url: 'https://reqres.in/api/users?fbclid=IwAR15kI7gviKtosy-LflJhO8rG8KOmX5B9Mc5otiRBg_TeqVpeqJDZA5DSug',
+                method: 'GET',
+                success: function(response) {
+                    const users = response.data;
+                    const avatarElements = document.querySelectorAll('.avatar-img');
+
+                    users.forEach((user, index) => {
+                        avatarElements[index].src = user.avatar;
+                    });
+                },
+                error: function(error) {
+                    console.error(error);
+                }
+            });
         });
     </script>
 @endsection
-
