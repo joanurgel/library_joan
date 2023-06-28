@@ -7,8 +7,8 @@
 <div class="container-fluid px-4">
 
     <div class="card mt-5">
-        <div class="card-header">
-            <h4>View Records
+        <div class="card-header bg-secondary">
+            <h4 class="text-light p-2">View Records
                 <a href="{{ url('admin/add-record') }}" class="btn btn-primary float-end">Add Record</a>
             </h4>
         </div>

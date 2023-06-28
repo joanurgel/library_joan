@@ -7,8 +7,8 @@
 <div class="container-fluid px-4">
     
     <div class="card mt-5">
-        <div class="card-header">
-            <h4>Books
+        <div class="card-header bg-secondary">
+            <h4 class="text-light p-2">BOOKS
                 <a href="{{ url('admin/books-borrowed') }}"class="btn btn-primary btn-sm float-end">Add Borrower</a>
             </h4>
 

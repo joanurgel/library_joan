@@ -15,8 +15,8 @@
             @endif
 
 
-        <div class="card-header">
-            <h4>Records
+        <div class="card-header bg-secondary">
+            <h4 class="text-light p-2">Records
                 <a href="{{ url('admin/add-record') }}" class="btn btn-primary float-end">Add Record</a>
             </h4>
         </div>

@@ -14,8 +14,12 @@ class BokkController extends Controller
      */
     public function index()
     {
-        $bokk = Bokk:: all();
-        return view('welcome' , compact('bokk'));
+        // $bokk = Bokk:: all();
+        // return view('welcome' , compact('bokk'));
+
+        $bokks = Bokk::all(); // Retrieve books from the database or any other logic
+
+        return view('bokks.index', compact('bokks'));
     }
 
     /**

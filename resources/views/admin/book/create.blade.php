@@ -8,7 +8,9 @@
 
     <div class="card mt-5">
         <div class="card-header">
-            <div class="text-center"><h2>BOOKS</h2></div>
+            <div class="text-center bg-secondary">
+                <h2 class="text-light p-2">BOOKS</h2>
+            </div>
             {{-- <h4>BOOKS
                 
             </h4> --}}

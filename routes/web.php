@@ -13,6 +13,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/book', [App\Http\Controllers\BokkController::class, 'index'])->name('book');
 
 Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function ()  {
 
